@@ -1,84 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>weather</title>
-    <script src="script.js"></script>
+    <title>About Us</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .home-button {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* About section styling */
+        .about-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .social-media img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .home-button {
+                font-size: 16px;
+            }
+
+            .about-section {
+                padding: 20px 0;
+            }
+
+            .footer {
+                padding: 10px 0;
+            }
+
+            .social-media a {
+                margin: 0 5px;
+            }
+
+            .social-media img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <h1>Welcome to Hdr's Weather_app</h1>
-    <h2>Enter your city name</h2>
-    <div class="card">
-        <div class="search">
-            <input type="text" placeholder="Enter city Name" spellcheck="false">
-            <button><img src="images/search.png" alt=""></button>
+    <header>
+        <div class="container">
+            <a href="index.html" class="home-button">Home</a>
         </div>
-        <div class="weather">
-            <img src="images/rain.png" class="weather-icon">
-            <h1 class="temp">__°C</h1>
-            <h2 class="city">Country</h2>
-            <div class="details">
-                <div class="col">
-                    <img src="images/humidity.png" alt="error">
-                    <div>
-                        <p class="humidity">__%</p>
-                        <p class="humidityP">humidty</p>
-                    </div>
-                </div>
+    </header>
+    
+    <section class="about-section">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>🌟 Welcome to IQRA Group! 🌟
 
-                <div class="col">
-                    <img src="images/wind.png" alt="error">
-                    <div>
-                        <p class="wind">__km/h</p>
-                        <p class="WindP">Wind speed</p>
-                    </div>
-                </div>
+                We're your go-to experts for:
+                1. 🌐 Web Development: Crafting stunning, user-centric websites.
+                2. 📱 Android Development: Building innovative, user-friendly apps.
+                3. 💡 Creativity & Innovation: Infusing brilliance into every project.
+                4. 🎯 Precision Execution: Ensuring flawless implementation.
+                5. 🚀 Cutting-edge Solutions: Pioneering the future of technology.
+                6. 🤝 Collaborative Approach: Partnering closely with you for success.
+                7. 🎨 Art meets Functionality: Creating seamless, captivating experiences.
+                8. 🔍 Transparent Communication: Keeping you in the loop, always.
+                9. 🌍 Digital Transformation: Elevating your brand's online presence.
+                <b> 📞 Connect with us: WhatsApp +91 8235129936 | Email mdhaiderali1012@gmail.com</b>
+                
+                Let's turn your ideas into remarkable realities together!</p>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="social-media">
+                <a href="#"><img src="linkedln.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter.webp" alt="Twitter"></a>
+                <a href="#"><img src="github.png" alt="Instagram"></a>
+                <a href="#"><img src="reddit.png" alt="Instagram"></a>
             </div>
+            <div>
+                <p>&copy; 2023 Your Company. All rights reserved.</p>
+                <p>Contact: contact@yourcompany.com</p>
+            </div
         </div>
-    </div>
-
-    <!-- small card  -->
-
-<div class="smallcard">
-
-    <div class="card2">
-       
-            <h1>Pressure</h1>
-            <img src="images/pressure.png" alt="error" class="weather-icon2">
-             <div class="pressure">__Hg</div>
-        
-    </div>
-
-    <div class="card2">
-       
-        <h1>Visibility</h1>
-        <img src="images/visibility.png" alt="error" class="weather-icon2">
-         <div class="visibility">___</div>
-    
-    </div>
-    <div class="card2">
-       
-        <h1>Max_temp</h1>
-        <img src="images/max_temp.png" alt="error" class="weather-icon2">
-         <div class="max_temp">__°C</div>
-    
-</div>
-<div class="card2">
-       
-    <h1>Min_temp</h1>
-    <img src="images/min_temp.png" alt="error" class="weather-icon2">
-     <div class="min_temp">__°C</div>
-
-</div>
-
-</div>
-
-
-
+    </footer>
 </body>
-<!-- API by city : https://api.openweathermap.org/data/2.5/weather?q=Rafiganj&appid=93dc2a3a1352b5da8246c737a59ff6aa&units=metric -->
 </html>
