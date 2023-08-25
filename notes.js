@@ -23,6 +23,21 @@ const saveNotes = () => {
     }
 }
 
+
+// Select the scroll button element
+const scrollBtn = document.querySelector("#addBtn");
+
+// Add an event listener to the scroll button
+scrollBtn.addEventListener("click", function () {
+    // Scroll the entire page body down
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const textareas = document.querySelectorAll('.note textarea');
 
