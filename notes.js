@@ -36,18 +36,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+//save button
+
 const addNote = (text = "") => {
     const note = document.createElement("div");
     note.classList.add("note")
     note.innerHTML = `
     <div class="tool">
-         <p class="N" >Note</p>
+         <p class="N">Note</p>
          <i class="save fas fa-save"></i>
          <i class="trash fas fa-trash"></i> 
     </div>
    <textarea class="dynamic-textarea" placeholder="Type your note here">${text}</textarea>
+   <p class="saved-message">Saved!</p>
     `;
 
+    const savedMessage = note.querySelector(".saved-message");
+    
     note.querySelector(".trash").addEventListener(
         "click",
         function() {
@@ -58,6 +64,12 @@ const addNote = (text = "") => {
     note.querySelector(".save").addEventListener(
         "click",
         function() {
+            savedMessage.style.opacity = 1;
+            savedMessage.style.color = "white"; // Set the text color to blue
+            
+            setTimeout(() => {
+                savedMessage.style.opacity = 0;
+            }, 1000);
             saveNotes()
         }
     )
@@ -70,6 +82,7 @@ const addNote = (text = "") => {
     main.appendChild(note);
     saveNotes()
 }
+
 
 (
     function() {
