@@ -1,102 +1,120 @@
-const addBtn = document.querySelector("#addBtn")
-const main = document.querySelector("#main")
-addBtn.addEventListener(
-    "click",
-    function() {
-        addNote()
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #7171e4, #106c10cf);
+}
+
+.N-H {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-size: 55px;
+}
+
+#main {
+    width: 100%;
+    height: 100px;
+    padding-bottom: 50px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#addBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    background-color: #0e52b0;
+    color: #e3e8e3;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    z-index: 99;
+}
+
+.N {
+    margin: 0 25px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.note {
+    width: 45%;
+    min-width: 300px;
+    margin: 15px;
+    position: relative;
+}
+
+.tool {
+    width: 100%;
+    background-color: #314c94;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tool i {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.note textarea {
+    border: none;
+    width: 100%;
+    min-height: 210px;
+    max-height: 400px;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+    overflow-y: auto;
+    background: #fff;
+    border: 4px solid #314c94;
+}
+
+.note textarea:focus {
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    outline: 0;
+}
+
+@media (max-width: 659px) {
+    .note {
+        width: 95%;
+        position: relative;
     }
-)
-const saveNotes = () => {
-    const notes = document.querySelectorAll(".note textarea");
-    console.log(notes);
-    const data = [];
-    notes.forEach(
-            (note) => {
-                data.push(note.value)
-            }
-        )
-        // console.log(data)
-    if (data.length === 0) {
-        localStorage.removeItem("notes")
-    } else {
-        localStorage.setItem("notes", JSON.stringify(data))
+    .N-H {
+        font-size: 42px;
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const textareas = document.querySelectorAll('.note textarea');
-
-    textareas.forEach(textarea => {
-        textarea.style.height = textarea.scrollHeight + 'px';
-
-        textarea.addEventListener('input', () => {
-            textarea.style.height = 'auto';
-            textarea.style.height = (textarea.scrollHeight) + 'px';
-        });
-    });
-});
-
-
-//save button
-
-const addNote = (text = "") => {
-    const note = document.createElement("div");
-    note.classList.add("note")
-    note.innerHTML = `
-    <div class="tool">
-         <p class="N">Note</p>
-         <i class="save fas fa-save"></i>
-         <i class="trash fas fa-trash"></i> 
-    </div>
-   <textarea class="dynamic-textarea" placeholder="Type your note here">${text}</textarea>
-   <p class="saved-message">Saved!</p>
-    `;
-
-    const savedMessage = note.querySelector(".saved-message");
-    
-    note.querySelector(".trash").addEventListener(
-        "click",
-        function() {
-            note.remove()
-            saveNotes()
-        }
-    )
-    note.querySelector(".save").addEventListener(
-        "click",
-        function() {
-            savedMessage.style.opacity = 1;
-            savedMessage.style.color = "white"; // Set the text color to blue
-            
-            setTimeout(() => {
-                savedMessage.style.opacity = 0;
-            }, 1000);
-            saveNotes()
-        }
-    )
-    note.querySelector("textarea").addEventListener(
-        "focusout",
-        function() {
-            saveNotes()
-        }
-    )
-    main.appendChild(note);
-    saveNotes()
+@media (max-width: 500px) {
+    .note {
+        width: 85%;
+        position: relative;
+    }
+    .N-H {
+        font-size: 24px;
+    }
 }
 
-
-(
-    function() {
-        const lsNotes = JSON.parse(localStorage.getItem("notes"));
-        if (lsNotes === null) {
-            addNote()
-        } else {
-            lsNotes.forEach(
-                (lsNote) => {
-                    addNote(lsNote)
-                }
-            )
-        }
-
+@media (max-width: 312px) {
+    .note {
+        width: 99%;
+        position: relative;
+        min-width: 200px;
     }
-)()
-
+    .N-H {
+        font-size: 24px;
+    }
+}
