@@ -1,0 +1,79 @@
+body{
+    background:#395147;
+}
+.container-fluid{
+    width: 95%;
+}
+
+.navbar-brand{
+    color: black;
+}
+
+.navbar{
+    background:#56f4c8;
+}
+.me-2{
+    width: 45% !important;
+    border-radius: 20px;
+    border:2px black solid;
+}
+
+.notes {
+    justify-content:center;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+
+.addNoteContainer{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    
+    
+}
+.navbar-brand{
+    color: black;
+    font-weight: bold;
+}
+#navAddNote{
+  color:black;
+    border-radius:13%;
+    background:#f2c136;
+    overflow:hidden;
+    font-weight:bold;
+    border:2px black solid;
+}
+.input_title{
+    font-size:20px;
+    color:#000000;
+    font-weight:bolder;
+    border: none;
+    border-bottom: 2px solid #146ac2;
+    margin-bottom: 6px;
+}
+
+.input_descp{
+    border: none;
+    font-size:16px;
+    width:100%;
+    font-weight:BOLD;
+}
+
+.button_save{
+    border-radius: 10px;
+}
+
+.card{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width:100PX;
+}
+
+.card_btns{
+    border-radius: 50%;
+    padding: 7px;
+
+}
