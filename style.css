@@ -6,8 +6,8 @@ body{
 }
 
 .navbar-brand{
-    color: white;
-     font-weight: bold;
+    color: black;
+     
 }
 
 .navbar{
@@ -36,11 +36,11 @@ body{
 }
 
 #navAddNote{
-  color:white;
+  color:black;
     border-radius:13%;
     background:#f2c136;
     overflow:hidden;
-    font-weight:bold;
+    
     border:2px black solid;
 }
 .input_title{
