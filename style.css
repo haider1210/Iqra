@@ -6,7 +6,8 @@ body{
 }
 
 .navbar-brand{
-    color: black;
+    color: white;
+     font-weight: bold;
 }
 
 .navbar{
@@ -33,12 +34,9 @@ body{
     
     
 }
-.navbar-brand{
-    color: black;
-    font-weight: bold;
-}
+
 #navAddNote{
-  color:black;
+  color:white;
     border-radius:13%;
     background:#f2c136;
     overflow:hidden;
