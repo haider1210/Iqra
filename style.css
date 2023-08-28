@@ -16,7 +16,7 @@ body{
 .me-2{
     width: 45% !important;
     border-radius: 20px;
-    border:2px black solid;
+    border:1px black solid;
 }
 
 .notes {
@@ -41,7 +41,7 @@ body{
     background:#f2c136;
     overflow:hidden;
     
-    border:2px black solid;
+    border:1px black solid;
 }
 .input_title{
     font-size:20px;
